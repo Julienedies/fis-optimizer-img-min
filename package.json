@@ -1,33 +1,35 @@
 {
-  "name": "fis-optimizer-img-min",
-  "version": "0.1.0",
-  "description": "A fis plugin for min image",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Julienedies/fis-optimizer-img-min.git"
-  },
-  "main": "index.js",
-  "scripts": {
-    "init": "",
-    "preInstall": ""
-  },
-  "bin": {},
-  "preferGlobal": "true",
-  "bugs": {
-    "url": "https://github.com/Julienedies/fis-optimizer-img-min/issues"
-  },
-  "keywords": [
-    "fis",
-    "image",
-    "fis image",
-    "min",
-    "fis min"
-  ],
-  "homepage": "https://github.com/Julienedies/fis-optimizer-img-min#readme",
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+    "name": "fis-optimizer-img-min",
+    "version": "0.1.0",
+    "description": "A fis plugin for min image",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Julienedies/fis-optimizer-img-min.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "init": "",
+        "preInstall": "chmod +x ./bin/cli.js"
+    },
+    "bin": {
+        "jimgmin_cli:": "bin/cli"
+    },
+    "preferGlobal": "true",
+    "bugs": {
+        "url": "https://github.com/Julienedies/fis-optimizer-img-min/issues"
+    },
+    "keywords": [
+        "fis",
+        "image",
+        "fis image",
+        "min",
+        "fis min"
+    ],
+    "homepage": "https://github.com/Julienedies/fis-optimizer-img-min#readme",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
 
-  },
-  "devDependencies": {}
+    },
+    "devDependencies": {}
 }
