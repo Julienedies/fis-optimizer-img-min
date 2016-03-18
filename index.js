@@ -22,7 +22,6 @@ module.exports = function(content, file, conf){
 
         var imagemin = new Imagemin()
             .src(content)
-            //.dest(path.resolve(__dirname, '..', 'min'))
             .use(Imagemin.gifsicle({interlaced: conf.interlaced}))
             .use(Imagemin.jpegtran({progressive: conf.progressive}))
             .use(Imagemin.optipng({optimizationLevel: conf.optimizationLevel}))
@@ -46,7 +45,6 @@ module.exports = function(content, file, conf){
             var percent = originalSize > 0 ? (saved / originalSize) * 100 : 0;
             saved && console.log(percent,'%');
             var _c = content;
-            console.log(util.inspect(files[0].contents), util.inspect(_c), _c == files[0].contents);
             content = files[0].contents;
 
         });
