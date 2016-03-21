@@ -14,5 +14,6 @@ node_modules/
 #其它
 *.log
 
+www/
 c.js
 min/

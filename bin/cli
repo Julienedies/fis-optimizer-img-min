@@ -1,18 +1,20 @@
 #! /usr/bin/env node
 
-/*
+var path = require('path');
 var Imagemin = require('imagemin');
 
 var conf = {
     interlaced: true,
     progressive: true,
-    optimizationLevel: 3
+    optimizationLevel: 10
 };
 
+var dest = path.join(process.cwd(), 'min');
+console.log(dest);
+
 var imagemin = new Imagemin()
-    .src('www/img*/
-/*.{gif,jpg,png,svg}')
-    .dest('min')
+    .src('*.{gif,jpg,png,svg}')
+    .dest(dest)
     .use(Imagemin.gifsicle({interlaced: conf.interlaced}))
     .use(Imagemin.jpegtran({progressive: conf.progressive}))
     .use(Imagemin.optipng({optimizationLevel: conf.optimizationLevel}))
@@ -21,6 +23,7 @@ var imagemin = new Imagemin()
         multipass: conf.multipass
     }));
 
-imagemin.run(function(err, files){
+imagemin.run(function (err, files) {
+    console.log(files);
     err && console.log(err);
-});*/
+});

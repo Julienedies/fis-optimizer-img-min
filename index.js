@@ -15,7 +15,7 @@ module.exports = function(content, file, conf){
     conf = fis.util.merge(conf, {
         interlaced: true,
         progressive: true,
-        optimizationLevel: 3
+        optimizationLevel: 7
     });
 
     if(file.isImage()){

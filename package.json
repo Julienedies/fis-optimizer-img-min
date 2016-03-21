@@ -1,6 +1,6 @@
 {
     "name": "fis-optimizer-img-min",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "A fis plugin for min image",
     "repository": {
         "type": "git",
@@ -9,10 +9,9 @@
     "main": "index.js",
     "scripts": {
         "init": "",
-        "preInstall": "chmod +x ./bin/cli.js"
+        "preInstall": ""
     },
     "bin": {
-        "jimgmin_cli:": "bin/cli"
     },
     "preferGlobal": "true",
     "bugs": {
@@ -29,7 +28,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-
+        "imagemin": "^4.0.0"
     },
     "devDependencies": {}
 }
