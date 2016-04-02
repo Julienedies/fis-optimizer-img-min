@@ -30,8 +30,6 @@ module.exports = function(content, file, conf){
                 multipass: conf.multipass
             }));
 
-        imagemin.use.bind(imagemin);
-
         imagemin.run(function(err, files){
 
             if (err) {
@@ -44,7 +42,7 @@ module.exports = function(content, file, conf){
             var saved = originalSize - optimizedSize;
             var percent = originalSize > 0 ? (saved / originalSize) * 100 : 0;
             saved && console.log(percent,'%');
-            var _c = content;
+
             content = files[0].contents;
 
         });
